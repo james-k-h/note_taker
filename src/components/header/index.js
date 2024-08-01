@@ -14,7 +14,7 @@ import { useThemeSwitch } from '../hooks/useThemeSwitch';
 import { useState } from 'react';
 import { cx } from '../../utils';
 
-const Header = () => {
+const Header = ({ session }) => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
 
@@ -102,12 +102,20 @@ const Header = () => {
         <Link href="/" className="mr-2">
           Home
         </Link>
-        <Link href="/sign-in" className="mx-2" target="_blank">
-          Login
-        </Link>
-        <Link href="/sign-up" className="mx-2" target="_blank">
+        {session ? (
+          <Link href="/workspace" className="mx-2">
+            Workspace
+          </Link>
+        ) : (
+          <Link href="/sign-in" className="mx-2">
+            Login
+          </Link>
+        )}
+
+        {/* <Link href="/sign-up" className="mx-2" target="_blank">
           Sign-up
-        </Link>
+        </Link> */}
+
         {/* 
         !!! 
         triggers light/dark 

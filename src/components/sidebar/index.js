@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import { Icons } from '../Icons';
 import { UserAccountNav } from '../UserAccountNav';
+import { buttonVariants } from '../ui/Button';
 
 const Sidebar = async () => {
   const session = await getServerSession(authOptions);
@@ -16,7 +17,6 @@ const Sidebar = async () => {
             Notetaker
           </p>
         </Link>
-
         {/* search bar */}
         {/* <SearchBar /> */}
 

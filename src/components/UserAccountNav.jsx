@@ -39,7 +39,7 @@ export function UserAccountNav({ user }) {
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href="/r/create">Create Community</Link>
+          <Link href="/r/create">Create Notepage</Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
